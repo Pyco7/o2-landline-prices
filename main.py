@@ -15,8 +15,7 @@ class Scraper:
     def run(self):
         print("Prices of calling a landline (per Month):\n")
         print("Price - Country")
-        for country in self.countries:
-            self._find_price(country)
+        [self._find_price(country) for country in self.countries]
 
     def _find_price(self, country):
         self._get_id("countryName").clear()
